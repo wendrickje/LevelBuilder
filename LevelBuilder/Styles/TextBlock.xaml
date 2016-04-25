@@ -1,0 +1,19 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:resourceKeys="clr-namespace:LevelBuilder.Common.ResourceKeys">
+    
+    
+    <Style TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily" Value="{StaticResource {x:Static resourceKeys:Global.FontFamily}}"/>
+        <Setter Property="FontSize" Value="{StaticResource {x:Static resourceKeys:Global.FontSize}}" />
+        <Setter Property="Foreground" Value="{StaticResource {x:Static resourceKeys:Global.Foreground}}"/>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="false"> 
+                <Setter Property="Foreground" Value="{StaticResource {x:Static resourceKeys:Global.DisabledForeground}}" />
+            </Trigger>
+            
+        </Style.Triggers>
+    </Style>
+    
+</ResourceDictionary>

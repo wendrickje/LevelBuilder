@@ -1,0 +1,258 @@
+﻿<Window
+    x:Class="LevelBuilder.View.NewProjectWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:common="clr-namespace:LevelBuilder.Common"
+    xmlns:converters="clr-namespace:LevelBuilder.Converters"
+    xmlns:view="clr-namespace:LevelBuilder.View"
+    xmlns:resourceKeys="clr-namespace:LevelBuilder.Common.ResourceKeys"
+    Title="New Project"
+    Height="300"
+    Width="300"
+    FocusManager.FocusedElement="{Binding ElementName=projectname}">
+    <Window.Resources>
+        <Style x:Key="NewProjectWindowLabel" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter Property="Width" Value="75" />
+            <Setter Property="Margin" Value="2" />
+        </Style>
+        <Style x:Key="PixelsLabel" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter Property="Margin" Value="2" />
+        </Style>
+        <Style x:Key="IconControl" TargetType="ContentControl">
+            <Setter Property="Width" Value="16"/>
+            <Setter Property="Height" Value="16"/>
+            <Setter Property="Background" Value="#01FFFFFF"/>
+            <Setter Property="Focusable" Value="False"/>
+        
+              
+        </Style>
+    </Window.Resources>
+    <Grid DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type view:NewProjectWindow}}}">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        
+        
+        <ItemsControl
+            Grid.Row="0"
+            HorizontalAlignment="Stretch"
+            x:Name="LevelMetaData">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel
+                        Orientation="Vertical"
+                        IsItemsHost="True" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemContainerStyle>
+                <Style TargetType="{x:Type Grid}">
+                    <Setter Property="Margin" Value="2" />
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock
+                    Style="{StaticResource NewProjectWindowLabel}"
+                    Text="{x:Static common:Constants.LevelDetails_LevelName_Label}" />
+                <ContentControl
+                    Grid.Column="1"
+                    Style="{StaticResource IconControl}"
+                    ToolTip="{x:Static common:HelpText.newproject_name}"
+                    Template="{StaticResource {x:Static resourceKeys:Icons.Help}}" />
+                <TextBox
+                    x:Name="projectname"
+                    Grid.Column="2"
+                    TabIndex="0"
+                    HorizontalAlignment="Stretch"
+                    Text="{Binding ProjectName, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Style="{StaticResource NewProjectWindowLabel}"
+                    Text="{x:Static common:Constants.LevelDetails_TileSet_Label}" />
+                <ContentControl
+                    Grid.Column="1"
+                    Style="{StaticResource IconControl}"
+                    ToolTip="{x:Static common:HelpText.newproject_spritesheet}"
+                    Template="{StaticResource {x:Static resourceKeys:Icons.Help}}" />
+                <TextBox
+                    Focusable="False"
+                    IsReadOnly="True"
+                    Grid.Column="2"
+                    HorizontalAlignment="Stretch"
+                    Text="{Binding FileName}" />
+                <Button
+                    ToolTip="{x:Static common:Constants.LevelDetails_BrowseForTileSet_ToolTip}"
+                    Grid.Column="3"
+                    TabIndex="3"
+                    Command="{Binding BrowseForTileSheetCommand}"
+                    Margin="2,0,0,0"
+                    Content="..." />
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Style="{StaticResource NewProjectWindowLabel}"
+                    Text="{x:Static common:Constants.LevelDetails_TileSize_Label}" />
+                <ContentControl
+                    Grid.Column="1"
+                    Style="{StaticResource IconControl}"
+                    ToolTip="{x:Static common:HelpText.newproject_tilesize}"
+                    Template="{StaticResource {x:Static resourceKeys:Icons.Help}}" />
+                <TextBox
+                    Grid.Column="2"
+                    TabIndex="5"
+                    HorizontalAlignment="Stretch"
+                    Text="{Binding TileSize, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBlock
+                    Grid.Column="3"
+                    Style="{StaticResource PixelsLabel}"
+                    Text="{x:Static common:Constants.Pixels_Label}" />
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Style="{StaticResource NewProjectWindowLabel}"
+                    Text="{x:Static common:Constants.NewProject_CanvasHeight}" />
+                <ContentControl
+                    Grid.Column="1"
+                    Style="{StaticResource IconControl}"
+                    ToolTip="{x:Static common:HelpText.newproject_canvasheight}"
+                    Template="{StaticResource {x:Static resourceKeys:Icons.Help}}" />
+                <TextBox
+                    Grid.Column="2"
+                    TabIndex="15"
+                    HorizontalAlignment="Stretch"
+                    Text="{Binding CanvasHeight, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBlock
+                    Grid.Column="3"
+                    Style="{StaticResource PixelsLabel}"
+                    Text="{x:Static common:Constants.Pixels_Label}" />
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Style="{StaticResource NewProjectWindowLabel}"
+                    Text="{x:Static common:Constants.NewProject_CanvasWidth}" />
+                <ContentControl
+                    Grid.Column="1"
+                    Style="{StaticResource IconControl}"
+                    ToolTip="{x:Static common:HelpText.newproject_canvaswidth}"
+                    Template="{StaticResource {x:Static resourceKeys:Icons.Help}}" />
+                <TextBox
+                    Grid.Column="2"
+                    TabIndex="20"
+                    HorizontalAlignment="Stretch"
+                    Text="{Binding CanvasWidth, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                <TextBlock
+                    Grid.Column="3"
+                    Style="{StaticResource PixelsLabel}"
+                    Text="{x:Static common:Constants.Pixels_Label}" />
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Style="{StaticResource NewProjectWindowLabel}"
+                    Text="{x:Static common:Constants.CanvasSize}" />
+                <TextBlock
+                    Grid.Column="2"
+                    HorizontalAlignment="Stretch"
+                    Text="{Binding CanvasPixelSize}" />
+                <TextBlock
+                    Grid.Column="3"
+                    Style="{StaticResource PixelsLabel}"
+                    Text="{x:Static common:Constants.Pixels_Label}" />
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Style="{StaticResource NewProjectWindowLabel}"
+                    Text="{x:Static common:Constants.CanvasSize}" />
+                <TextBlock
+                    Grid.Column="2"
+                    HorizontalAlignment="Stretch"
+                    Text="{Binding CanvasTileSize}" />
+                <TextBlock
+                    Grid.Column="3"
+                    Style="{StaticResource PixelsLabel}"
+                    Text="{x:Static common:Constants.Tiles_Label}" />
+            </Grid>
+            
+        </ItemsControl>
+
+        
+        <Grid Grid.Row="1">
+            <Border Visibility="{Binding Error, Converter={converters:NullVisibilityConverter}}" CornerRadius="3" Background="#ffe8e8" BorderBrush="#c71f1f" BorderThickness="1">
+                <TextBlock TextWrapping="Wrap" Text="{Binding Error}"/>
+            </Border>
+        </Grid>
+        
+        <Grid Grid.Row="2">
+            
+            <Border Background="Silver" BorderBrush="Gray" BorderThickness="0,1,0,0" />
+            <StackPanel
+                Margin="0,5,0,5"
+                HorizontalAlignment="Right"
+                Orientation="Horizontal">
+                <Button
+                    ToolTip="{Binding Error}"
+                    TabIndex="30"
+                    Width="50"
+                    Content="{x:Static common:Constants.OkButton}"
+                    Command="{Binding CreateCommand}"
+                    x:Name="okbutton"
+                    IsDefault="True" />
+                <Button
+                    TabIndex="40"
+                    Margin="5,0"
+                    Width="50"
+                    Content="{x:Static common:Constants.CancelButton}"
+                
+                    x:Name="cancelbutton"
+                    IsCancel="True" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

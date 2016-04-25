@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EmptyTileBrush_ToolTip" xml:space="preserve">
+    <value>eraser</value>
+  </data>
+  <data name="EventTileBrush_ToolTip" xml:space="preserve">
+    <value>event trigger brush</value>
+  </data>
+  <data name="exportedExtension" xml:space="preserve">
+    <value>.lpfx</value>
+  </data>
+  <data name="LayerLabel_Backdrop" xml:space="preserve">
+    <value>backdrop</value>
+  </data>
+  <data name="LayerLabel_Background" xml:space="preserve">
+    <value>background</value>
+  </data>
+  <data name="LayerLabel_Foreground" xml:space="preserve">
+    <value>foreground</value>
+  </data>
+  <data name="LayerLabel_Middleground" xml:space="preserve">
+    <value>middleground</value>
+  </data>
+  <data name="OutputDirectoryName" xml:space="preserve">
+    <value>output</value>
+  </data>
+  <data name="StartTileBrush_ToolTip" xml:space="preserve">
+    <value>start position brush</value>
+  </data>
+  <data name="TilePalette_EmptyWarning" xml:space="preserve">
+    <value>warning. tile size is too small or file does not exist. cannot proceed</value>
+  </data>
+  <data name="TilePalette_ExceedsWarning" xml:space="preserve">
+    <value>warning. tile size exceeds sheet dimensions. some tiles may have been cropped</value>
+  </data>
+  <data name="TileSheetName" xml:space="preserve">
+    <value>tilesheet</value>
+  </data>
+  <data name="WorkingProjectDirectoryName" xml:space="preserve">
+    <value>projects</value>
+  </data>
+  <data name="exportedFileType" xml:space="preserve">
+    <value>Level Package File</value>
+  </data>
+  <data name="levelconfigurationextension" xml:space="preserve">
+    <value>.lev.config</value>
+  </data>
+  <data name="levellayoutextension" xml:space="preserve">
+    <value>.lev</value>
+  </data>
+  <data name="projectFileExtension" xml:space="preserve">
+    <value>.lvlp</value>
+  </data>
+  <data name="projectFileTypeName" xml:space="preserve">
+    <value>Level Builder Project File</value>
+  </data>
+  <data name="eventtilecaption" xml:space="preserve">
+    <value>!</value>
+  </data>
+  <data name="starttilecaption" xml:space="preserve">
+    <value>s</value>
+  </data>
+  <data name="FillBucketTileBrush_ToolTip" xml:space="preserve">
+    <value>fill tool</value>
+  </data>
+  <data name="PickerTileBrush_ToolTip" xml:space="preserve">
+    <value>tile picker</value>
+  </data>
+  <data name="CancelButton" xml:space="preserve">
+    <value>cancel</value>
+  </data>
+  <data name="CanvasSize" xml:space="preserve">
+    <value>canvas size:</value>
+  </data>
+  <data name="editmenucaption" xml:space="preserve">
+    <value>edit</value>
+  </data>
+  <data name="editmenu_canvassize" xml:space="preserve">
+    <value>canvas size</value>
+  </data>
+  <data name="editmenu_setting" xml:space="preserve">
+    <value>settings</value>
+  </data>
+  <data name="ExceptionDialogTitle" xml:space="preserve">
+    <value>Exception</value>
+  </data>
+  <data name="exportDialogTitle" xml:space="preserve">
+    <value>Export Project</value>
+  </data>
+  <data name="filemenucaption" xml:space="preserve">
+    <value>file</value>
+  </data>
+  <data name="filemenu_close" xml:space="preserve">
+    <value>close project</value>
+  </data>
+  <data name="filemenu_exit" xml:space="preserve">
+    <value>exit</value>
+  </data>
+  <data name="filemenu_export" xml:space="preserve">
+    <value>export</value>
+  </data>
+  <data name="filemenu_new" xml:space="preserve">
+    <value>new</value>
+  </data>
+  <data name="filemenu_open" xml:space="preserve">
+    <value>open</value>
+  </data>
+  <data name="filemenu_save" xml:space="preserve">
+    <value>save</value>
+  </data>
+  <data name="filemenu_saveas" xml:space="preserve">
+    <value>save as</value>
+  </data>
+  <data name="helpmenucaption" xml:space="preserve">
+    <value>help</value>
+  </data>
+  <data name="helpmenu_about" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="helpmenu_documentation" xml:space="preserve">
+    <value>documentation</value>
+  </data>
+  <data name="LevelDetails_ApplyChanges_ToolTip" xml:space="preserve">
+    <value>apply changes</value>
+  </data>
+  <data name="LevelDetails_BrowseForTileSet_ToolTip" xml:space="preserve">
+    <value>browse for tile set</value>
+    <comment>tool tip for button</comment>
+  </data>
+  <data name="LevelDetails_Header" xml:space="preserve">
+    <value>level details</value>
+    <comment>header for level details section</comment>
+  </data>
+  <data name="LevelDetails_LevelName_Label" xml:space="preserve">
+    <value>level name:</value>
+    <comment>label text for name</comment>
+  </data>
+  <data name="LevelDetails_TileSet_Label" xml:space="preserve">
+    <value>tile sheet:</value>
+    <comment>label text for tile set</comment>
+  </data>
+  <data name="LevelDetails_TileSize_Label" xml:space="preserve">
+    <value>tile size:</value>
+    <comment>label text for tile size </comment>
+  </data>
+  <data name="NewProject_CanvasHeight" xml:space="preserve">
+    <value>canvas height:</value>
+  </data>
+  <data name="NewProject_CanvasWidth" xml:space="preserve">
+    <value>canvas width:</value>
+  </data>
+  <data name="OkButton" xml:space="preserve">
+    <value>ok</value>
+  </data>
+  <data name="Pixels_Label" xml:space="preserve">
+    <value>pixels</value>
+  </data>
+  <data name="StatusUpdate_LoadingFile" xml:space="preserve">
+    <value>loading</value>
+  </data>
+  <data name="TilePalette_ExceedsWarning1" xml:space="preserve">
+    <value>warning. tile size exceeds sheet dimensions. some tiles may have been cropped</value>
+  </data>
+  <data name="TilePalette_Header" xml:space="preserve">
+    <value>tile palette</value>
+    <comment>header for tile palette section</comment>
+  </data>
+  <data name="Tiles_Label" xml:space="preserve">
+    <value>tiles</value>
+  </data>
+  <data name="viewmenucaption" xml:space="preserve">
+    <value>view</value>
+  </data>
+  <data name="viewmenu_eventmanager" xml:space="preserve">
+    <value>event manager</value>
+  </data>
+  <data name="viewmenu_gridlines" xml:space="preserve">
+    <value>grid lines</value>
+  </data>
+  <data name="BrushTileBrush_ToolTip" xml:space="preserve">
+    <value>brush</value>
+  </data>
+</root>

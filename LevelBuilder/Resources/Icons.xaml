@@ -1,0 +1,709 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:resourceKeys="clr-namespace:LevelBuilder.Common.ResourceKeys">
+
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.Brush}">
+
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+
+                <Canvas>
+
+                    <Canvas>
+
+                        <!-- Layer 1/New Symbol 1/<Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M 0.843,-48.891 L -1.752,-51.486 C -1.752,-51.486 0.501,-52.394 1.292,-53.184 C 2.083,-53.975 6.034,-57.926 6.034,-57.926 C 6.034,-57.926 6.824,-58.716 7.473,-58.066 C 8.122,-57.418 7.331,-56.629 7.331,-56.629 C 7.331,-56.629 3.380,-52.677 2.590,-51.887 C 1.800,-51.096 0.843,-48.891 0.843,-48.891 Z" />
+
+                        <!-- Layer 1/New Symbol 1/<Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M -7.729,-43.889 C -5.710,-44.387 -5.907,-46.022 -4.708,-48.891 C -4.118,-50.301 -2.542,-50.697 -2.542,-50.697 L 0.053,-48.102 C 0.053,-48.102 0.053,-42.537 -7.729,-43.889 Z" />
+
+                        <!-- Layer 1/New Symbol 1 -->
+                        <Canvas.RenderTransform>
+                            <MatrixTransform
+                                Matrix="1.000,0.000,0.000,1.000,7.729,58.323" />
+                        </Canvas.RenderTransform>
+
+                    </Canvas>
+
+                </Canvas>
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.Help}">
+
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Background="{TemplateBinding Background}"
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+
+                <!-- Layer 1/New Symbol 211/<Group>/<Compound Path> -->
+                <Path
+                    Fill="{TemplateBinding Foreground}"
+                    Data="F1 M 0.298,-45.676 C -0.371,-45.676 -0.886,-46.220 -0.886,-46.846 C -0.886,-47.516 -0.371,-48.030 0.298,-48.030 C 0.953,-48.030 1.468,-47.502 1.468,-46.846 C 1.468,-46.220 0.938,-45.676 0.298,-45.676 Z M 1.050,-49.590 C 1.050,-49.340 1.009,-49.299 0.758,-49.299 L -0.259,-49.299 C -0.510,-49.299 -0.552,-49.340 -0.552,-49.590 L -0.552,-51.332 C -0.552,-51.668 -0.050,-51.723 0.438,-51.889 C 0.938,-52.070 1.427,-52.350 1.427,-53.102 C 1.427,-53.742 1.022,-54.091 0.270,-54.091 C -0.593,-54.091 -1.333,-53.631 -1.471,-53.631 C -1.542,-53.631 -1.610,-53.699 -1.625,-53.770 L -1.987,-54.717 C -2.015,-54.773 -2.015,-54.814 -2.015,-54.871 C -2.015,-55.233 -0.356,-55.692 0.577,-55.692 C 2.262,-55.692 3.307,-54.605 3.307,-53.088 C 3.307,-51.291 1.873,-50.817 1.050,-50.538 L 1.050,-49.590 Z"
+                    Canvas.Left="2"
+                    Canvas.Top="2" />
+
+                <!-- Layer 1/New Symbol 211/<Group>/<Compound Path> -->
+                <Path
+                    Fill="{TemplateBinding Foreground}"
+                    Data="F1 M 0.000,-44.432 C -3.622,-44.432 -6.568,-47.377 -6.568,-51.000 C -6.568,-54.621 -3.622,-57.566 0.000,-57.566 C 3.622,-57.566 6.568,-54.621 6.568,-51.000 C 6.568,-47.377 3.622,-44.432 0.000,-44.432 Z M 0.000,-58.692 C -4.249,-58.692 -7.693,-55.250 -7.693,-51.000 C -7.693,-46.752 -4.249,-43.307 0.000,-43.307 C 4.249,-43.307 7.693,-46.752 7.693,-51.000 C 7.693,-55.250 4.249,-58.692 0.000,-58.692 Z"
+                    Canvas.Left="2"
+                    Canvas.Top="2.5" />
+
+                <!-- Layer 1/New Symbol 211 -->
+                <Canvas.RenderTransform>
+                    <MatrixTransform
+                        Matrix="1.000,0.000,0.000,1.000,6,57" />
+                </Canvas.RenderTransform>
+
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.VisibilityOn}">
+
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+
+                <Canvas>
+
+                    <Canvas>
+
+                        <!-- Layer 1/New Symbol 6/<Compound Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M 0.000,-47.364 C -2.009,-47.364 -3.634,-48.993 -3.634,-51.000 C -3.634,-53.008 -2.009,-54.633 0.000,-54.633 C 2.006,-54.633 3.634,-53.008 3.634,-51.000 C 3.634,-48.993 2.006,-47.364 0.000,-47.364 Z M -7.875,-51.302 L -7.875,-50.697 C -4.240,-44.639 4.240,-44.639 7.875,-50.697 L 7.875,-51.302 C 4.240,-57.359 -4.240,-57.359 -7.875,-51.302 Z" />
+
+                        <!-- Layer 1/New Symbol 6/<Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M 1.817,-51.000 C 1.817,-49.995 1.003,-49.182 0.000,-49.182 C -1.003,-49.182 -1.817,-49.995 -1.817,-51.000 C -1.817,-52.006 -1.003,-52.816 0.000,-52.816 C 1.003,-52.816 1.817,-52.006 1.817,-51.000 Z" />
+
+                        <!-- Layer 1/New Symbol 6 -->
+                        <Canvas.RenderTransform>
+                            <MatrixTransform
+                                Matrix="1.000,0.000,0.000,1.000,7.875,55.845" />
+                        </Canvas.RenderTransform>
+
+                    </Canvas>
+
+                </Canvas>
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.VisibilityOff}">
+
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+
+                <Canvas>
+
+                    <Canvas>
+
+                        <!-- Layer 1/New Symbol 7/<Compound Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M 0.000,-45.625 C -1.128,-45.625 -2.174,-45.979 -3.040,-46.574 L 4.426,-54.040 C 5.021,-53.174 5.375,-52.128 5.375,-51.000 C 5.375,-48.035 2.964,-45.625 0.000,-45.625 Z M 0.000,-56.375 C 1.114,-56.375 2.150,-56.033 3.009,-55.451 L -4.451,-47.991 C -5.034,-48.850 -5.375,-49.887 -5.375,-51.000 C -5.375,-53.964 -2.964,-56.375 0.000,-56.375 Z M 0.000,-58.375 C -4.072,-58.375 -7.375,-55.072 -7.375,-51.000 C -7.375,-46.928 -4.072,-43.625 0.000,-43.625 C 4.073,-43.625 7.375,-46.928 7.375,-51.000 C 7.375,-55.072 4.073,-58.375 0.000,-58.375 Z" />
+
+                        <!-- Layer 1/New Symbol 7 -->
+                        <Canvas.RenderTransform>
+                            <MatrixTransform
+                                Matrix="1.000,0.000,0.000,1.000,7.375,58.375" />
+                        </Canvas.RenderTransform>
+
+                    </Canvas>
+
+                </Canvas>
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.Browse}">
+
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+
+                <Canvas>
+
+                    <Canvas>
+
+                        <!-- Layer 1/New Symbol 251/<Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M -6.346,-55.038 L -0.577,-55.038 L -2.885,-57.346 L -6.346,-57.346 L -6.346,-55.038 Z" />
+
+                        <!-- Layer 1/New Symbol 251/<Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M 6.346,-44.653 L -6.346,-44.653 L -7.500,-52.731 L 7.500,-52.731 L 6.346,-44.653 Z" />
+
+                        <!-- Layer 1/New Symbol 251/<Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M 6.346,-53.885 L -6.346,-53.885 L -6.346,-55.038 L 6.346,-55.038 L 6.346,-53.885 Z" />
+
+                        <!-- Layer 1/New Symbol 251 -->
+                        <Canvas.RenderTransform>
+                            <MatrixTransform
+                                Matrix="1.000,0.000,0.000,1.000,7.500,57.346" />
+                        </Canvas.RenderTransform>
+
+                    </Canvas>
+
+                </Canvas>
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.New}">
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+
+                <Canvas>
+
+                    <Canvas>
+
+                        <!-- Layer 1/New Symbol 54/<Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M 7.500,-48.000 L 5.500,-48.000 L 5.500,-50.000 L 3.500,-50.000 L 3.500,-48.000 L 1.500,-48.000 L 1.500,-46.000 L 3.500,-46.000 L 3.500,-44.000 L 5.500,-44.000 L 5.500,-46.000 L 7.500,-46.000 L 7.500,-48.000 Z" />
+
+                        <!-- Layer 1/New Symbol 54/<Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M -1.500,-45.000 L -3.500,-45.000 L -5.500,-45.000 L -5.500,-57.000 L 0.086,-57.000 L 3.500,-53.585 L 3.500,-51.000 L 5.500,-51.000 L 5.500,-54.414 L 0.914,-59.000 L -7.500,-59.000 L -7.500,-43.000 L 1.500,-43.000 L 1.500,-45.000 L -1.500,-45.000 Z" />
+
+                        <!-- Layer 1/New Symbol 54 -->
+                        <Canvas.RenderTransform>
+                            <MatrixTransform
+                                Matrix="1.000,0.000,0.000,1.000,7.500,59.000" />
+                        </Canvas.RenderTransform>
+
+                    </Canvas>
+
+                </Canvas>
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.Layers}">
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+
+                <Canvas>
+
+                    <!-- Layer 1/New Symbol 70/<Group>/<Path> -->
+                    <Path
+                        Fill="{TemplateBinding Foreground}"
+                        Data="F1 M -8.000,-55.000 L 0.000,-51.000 L 8.000,-55.000 L 0.000,-59.000 L -8.000,-55.000 Z" />
+
+                </Canvas>
+
+                <Canvas>
+
+                    <!-- Layer 1/New Symbol 70/<Group>/<Path> -->
+                    <Path
+                        Fill="{TemplateBinding Foreground}"
+                        Data="F1 M 0.000,-49.531 L -4.938,-52.000 L -8.000,-51.000 L 0.000,-47.000 L 8.000,-51.000 L 5.188,-52.063 L 0.000,-49.531 Z" />
+
+                </Canvas>
+
+                <Canvas>
+
+                    <!-- Layer 1/New Symbol 70/<Group>/<Path> -->
+                    <Path
+                        Fill="{TemplateBinding Foreground}"
+                        Data="F1 M 0.000,-45.531 L -4.938,-48.000 L -8.000,-47.000 L 0.000,-43.000 L 8.000,-47.000 L 5.188,-48.063 L 0.000,-45.531 Z" />
+
+                </Canvas>
+
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.Settings}">
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+
+                <Canvas>
+
+                    <Canvas>
+
+                        <Canvas>
+
+                            <Canvas>
+
+                                <!-- Layer 1/New Symbol 83/<Group>/<Group>/<Compound Path> -->
+                                <Path
+                                    Fill="{TemplateBinding Foreground}"
+                                    Data="F1 M -0.208,-48.918 C -1.357,-48.918 -2.290,-49.848 -2.290,-51.000 C -2.290,-52.152 -1.357,-53.082 -0.208,-53.082 C 0.944,-53.082 1.876,-52.152 1.876,-51.000 C 1.876,-49.848 0.944,-48.918 -0.208,-48.918 Z M 6.665,-52.459 L 4.575,-52.459 C 4.451,-52.859 4.276,-53.238 4.063,-53.590 L 5.449,-54.979 C 5.776,-55.302 5.776,-55.831 5.449,-56.156 L 4.861,-56.744 C 4.535,-57.068 4.007,-57.066 3.683,-56.744 L 2.273,-55.336 C 1.892,-55.553 1.479,-55.721 1.040,-55.834 L 1.040,-57.666 C 1.040,-58.125 0.669,-58.500 0.208,-58.500 L -0.625,-58.500 C -1.084,-58.500 -1.458,-58.125 -1.458,-57.666 L -1.458,-55.834 C -1.937,-55.713 -2.385,-55.522 -2.798,-55.272 L -3.977,-56.451 C -4.302,-56.774 -4.832,-56.775 -5.156,-56.451 L -5.747,-55.862 C -6.072,-55.538 -6.068,-55.008 -5.745,-54.682 L -4.543,-53.480 C -4.797,-53.038 -4.988,-52.555 -5.097,-52.043 L -6.666,-52.043 C -7.126,-52.043 -7.500,-51.670 -7.500,-51.209 L -7.500,-50.375 C -7.500,-49.916 -7.126,-49.543 -6.666,-49.543 L -4.990,-49.543 C -4.839,-49.041 -4.609,-48.578 -4.316,-48.156 L -5.449,-47.023 C -5.775,-46.697 -5.775,-46.168 -5.452,-45.844 L -4.863,-45.256 C -4.536,-44.933 -4.007,-44.933 -3.683,-45.258 L -2.417,-46.522 C -1.991,-46.311 -1.528,-46.156 -1.042,-46.078 L -1.042,-44.335 C -1.042,-43.875 -0.669,-43.502 -0.208,-43.500 L 0.625,-43.500 C 1.083,-43.502 1.458,-43.875 1.458,-44.335 L 1.458,-46.293 C 1.877,-46.441 2.275,-46.639 2.636,-46.893 L 3.977,-45.551 C 4.303,-45.226 4.829,-45.226 5.156,-45.551 L 5.745,-46.139 C 6.072,-46.464 6.072,-46.992 5.742,-47.318 L 4.272,-48.791 C 4.453,-49.156 4.593,-49.547 4.680,-49.959 L 6.665,-49.959 C 7.126,-49.959 7.499,-50.330 7.500,-50.793 L 7.500,-51.625 C 7.499,-52.084 7.126,-52.459 6.665,-52.459 Z" />
+
+                            </Canvas>
+
+                        </Canvas>
+
+                        <!-- Layer 1/New Symbol 83 -->
+                        <Canvas.RenderTransform>
+                            <MatrixTransform
+                                Matrix="1.000,0.000,0.000,1.000,7.500,58.500" />
+                        </Canvas.RenderTransform>
+
+                    </Canvas>
+
+                </Canvas>
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.Save}">
+
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+                <Canvas>
+
+                    <Canvas>
+
+                        <!-- Layer 1/New Symbol 157/<Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M 0.000,-47.000 L -2.000,-47.000 L -2.000,-45.000 L 0.000,-45.000 L 0.000,-47.000 Z" />
+
+                        <!-- Layer 1/New Symbol 157/<Compound Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M 5.000,-51.000 L -5.000,-51.000 L -5.000,-58.000 L 5.000,-58.000 L 5.000,-51.000 Z M 3.000,-44.000 L -3.000,-44.000 L -3.000,-48.000 L 3.000,-48.000 L 3.000,-44.000 Z M -8.000,-59.000 L -8.000,-43.000 L 6.000,-43.000 L 8.000,-45.000 L 8.000,-59.000 L -8.000,-59.000 Z" />
+
+                        <!-- Layer 1/New Symbol 157 -->
+                        <Canvas.RenderTransform>
+                            <MatrixTransform
+                                Matrix="1.000,0.000,0.000,1.000,8.000,59.000" />
+                        </Canvas.RenderTransform>
+
+                    </Canvas>
+
+                </Canvas>
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+
+    <!-- right arrow -->
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.Selection}">
+
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+
+                <Canvas>
+
+                    <Canvas>
+
+                        <Canvas>
+
+                            <Canvas>
+
+                                <!-- Layer 1/<Group>/<Group>/<Group>/<Path> -->
+                                <Path
+                                    Fill="{TemplateBinding Foreground}"
+                                    Data="F1 M 14.000,14.000 L 12.000,14.000 L 12.000,13.000 L 13.000,13.000 L 13.000,12.000 L 14.000,12.000 L 14.000,14.000 Z" />
+
+                            </Canvas>
+
+                            <Canvas>
+
+                                <!-- Layer 1/<Group>/<Group>/<Group>/<Compound Path> -->
+                                <Path
+                                    Fill="{TemplateBinding Foreground}"
+                                    Data="F1 M 6.000,14.000 L 4.000,14.000 L 4.000,13.000 L 6.000,13.000 L 6.000,14.000 Z M 10.000,14.000 L 8.000,14.000 L 8.000,13.000 L 10.000,13.000 L 10.000,14.000 Z" />
+
+                            </Canvas>
+
+                            <Canvas>
+
+                                <!-- Layer 1/<Group>/<Group>/<Group>/<Path> -->
+                                <Path
+                                    Fill="{TemplateBinding Foreground}"
+                                    Data="F1 M 2.000,14.000 L 0.000,14.000 L 0.000,12.000 L 1.000,12.000 L 1.000,13.000 L 2.000,13.000 L 2.000,14.000 Z" />
+
+                            </Canvas>
+
+                            <Canvas>
+
+                                <!-- Layer 1/<Group>/<Group>/<Group>/<Compound Path> -->
+                                <Path
+                                    Fill="{TemplateBinding Foreground}"
+                                    Data="F1 M 1.000,6.000 L 0.000,6.000 L 0.000,4.000 L 1.000,4.000 L 1.000,6.000 Z M 1.000,10.000 L 0.000,10.000 L 0.000,8.000 L 1.000,8.000 L 1.000,10.000 Z" />
+
+                            </Canvas>
+
+                            <Canvas>
+
+                                <!-- Layer 1/<Group>/<Group>/<Group>/<Path> -->
+                                <Path
+                                    Fill="{TemplateBinding Foreground}"
+                                    Data="F1 M 1.000,2.000 L 0.000,2.000 L 0.000,0.000 L 2.000,0.000 L 2.000,1.000 L 1.000,1.000 L 1.000,2.000 Z" />
+
+                            </Canvas>
+
+                            <Canvas>
+
+                                <!-- Layer 1/<Group>/<Group>/<Group>/<Compound Path> -->
+                                <Path
+                                    Fill="{TemplateBinding Foreground}"
+                                    Data="F1 M 6.000,1.000 L 4.000,1.000 L 4.000,0.000 L 6.000,0.000 L 6.000,1.000 Z M 10.000,1.000 L 8.000,1.000 L 8.000,0.000 L 10.000,0.000 L 10.000,1.000 Z" />
+
+                            </Canvas>
+
+                            <Canvas>
+
+                                <!-- Layer 1/<Group>/<Group>/<Group>/<Path> -->
+                                <Path
+                                    Fill="{TemplateBinding Foreground}"
+                                    Data="F1 M 14.000,1.500 L 13.000,1.500 L 13.000,1.000 L 12.500,1.000 L 12.500,0.000 L 14.000,0.000 L 14.000,1.500 Z" />
+
+                            </Canvas>
+
+                            <Canvas>
+
+                                <!-- Layer 1/<Group>/<Group>/<Group>/<Compound Path> -->
+                                <Path
+                                    Fill="{TemplateBinding Foreground}"
+                                    Data="F1 M 14.000,6.000 L 13.000,6.000 L 13.000,4.000 L 14.000,4.000 L 14.000,6.000 Z M 14.000,10.000 L 13.000,10.000 L 13.000,8.000 L 14.000,8.000 L 14.000,10.000 Z" />
+
+                            </Canvas>
+
+                        </Canvas>
+
+                    </Canvas>
+
+                </Canvas>
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.Bucket}">
+
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+
+                <Canvas>
+
+                    <Canvas>
+
+                        <!-- Layer 1/New Symbol 5/<Compound Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M -4.869,-49.153 L -6.283,-50.566 L -2.041,-54.811 L -0.626,-53.396 L -4.869,-49.153 Z M -0.626,-56.226 L -2.041,-57.639 L -4.162,-55.518 L -4.869,-53.396 L -6.990,-51.274 C -8.404,-49.861 -7.697,-49.153 -6.990,-48.446 C -6.283,-47.738 -5.576,-47.031 -4.869,-46.324 C -4.162,-45.618 -3.455,-44.911 -2.041,-46.324 C -1.071,-47.295 0.081,-48.446 1.495,-49.861 C 2.909,-51.274 5.031,-50.568 5.031,-50.568 L -0.626,-56.226 Z" />
+
+                        <!-- Layer 1/New Symbol 5/<Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M 1.959,-55.568 L 4.959,-51.568 C 4.959,-51.568 4.959,-49.568 4.959,-44.568 C 6.959,-46.568 7.959,-50.568 6.959,-53.568 C 5.959,-56.568 1.959,-55.568 1.959,-55.568 Z" />
+
+                        <!-- Layer 1/New Symbol 5 -->
+                        <Canvas.RenderTransform>
+                            <MatrixTransform
+                                Matrix="1.000,0.000,0.000,1.000,7.352,57.432" />
+                        </Canvas.RenderTransform>
+
+                    </Canvas>
+
+                </Canvas>
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+
+    <!-- empty file with pencil -->
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.SaveAs}">
+
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+
+                <Canvas>
+
+                    <Canvas>
+
+                        <Canvas>
+
+                            <!-- Layer 1/New Symbol 56/<Group>/<Path> -->
+                            <Path
+                                Fill="{TemplateBinding Foreground}"
+                                Data="F1 M 3.003,-43.754 L 3.000,-43.758 L 3.000,-43.000 L 5.000,-43.000 L 5.000,-45.750 L 3.003,-43.754 Z" />
+
+                            <!-- Layer 1/New Symbol 56/<Group>/<Path> -->
+                            <Path
+                                Fill="{TemplateBinding Foreground}"
+                                Data="F1 M -3.000,-45.000 L -6.000,-45.000 L -6.000,-57.000 L -0.414,-57.000 L 2.445,-54.141 L 3.859,-55.555 L 0.414,-59.000 L -8.000,-59.000 L -8.000,-43.000 L -3.000,-43.000 L -3.000,-45.000 Z" />
+
+                        </Canvas>
+
+                        <Canvas>
+
+                            <Canvas>
+
+                                <!-- Layer 1/New Symbol 56/<Group>/<Group>/<Path> -->
+                                <Path
+                                    Fill="{TemplateBinding Foreground}"
+                                    Data="F1 M 2.471,-45.279 L -0.689,-48.439 L 4.840,-53.969 L 8.000,-50.810 L 2.471,-45.279 Z" />
+
+                            </Canvas>
+
+                        </Canvas>
+
+                        <Canvas>
+
+                            <Canvas>
+
+                                <!-- Layer 1/New Symbol 56/<Group>/<Group>/<Path> -->
+                                <Path
+                                    Fill="{TemplateBinding Foreground}"
+                                    Data="F1 M -1.876,-44.000 L -1.852,-45.556 L -1.826,-47.109 L -0.296,-45.579 L 1.233,-44.051 L -0.322,-44.026 L -1.876,-44.000 Z" />
+
+                            </Canvas>
+
+                        </Canvas>
+
+                        <!-- Layer 1/New Symbol 56 -->
+                        <Canvas.RenderTransform>
+                            <MatrixTransform
+                                Matrix="1.000,0.000,0.000,1.000,8.000,59.000" />
+                        </Canvas.RenderTransform>
+
+                    </Canvas>
+
+                </Canvas>
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+
+    <!-- warning icon -->
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.Warning}">
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+
+                <!-- Layer 1/New Symbol 124/<Compound Path> -->
+                <Path
+                    Fill="{TemplateBinding Foreground}"
+                    Data="F1 M 1.000,-49.018 L -1.000,-49.018 L -1.000,-53.018 L 1.000,-53.018 L 1.000,-49.018 Z M 1.000,-46.018 L -1.000,-46.018 L -1.000,-48.018 L 1.000,-48.018 L 1.000,-46.018 Z M 7.052,-45.850 L 4.948,-49.828 C 4.427,-50.797 3.573,-52.381 3.052,-53.350 L 0.948,-57.257 C 0.427,-58.226 -0.427,-58.226 -0.948,-57.257 L -3.051,-53.334 C -3.573,-52.363 -4.426,-50.762 -4.948,-49.793 L -7.052,-45.850 C -7.573,-44.880 -7.100,-44.018 -6.000,-44.018 L -2.000,-44.018 C -0.900,-44.018 0.900,-44.018 2.000,-44.018 L 6.000,-44.018 C 7.100,-44.018 7.573,-44.880 7.052,-45.850 Z" />
+
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+
+    <!-- event icon -->
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.Event}">
+
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+
+                <Canvas>
+
+                    <Canvas>
+
+                        <!-- Layer 1/New Symbol 27/<Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M -1.000,-59.000 L 6.000,-59.000 L 0.000,-53.000 L 5.000,-53.000 L -5.000,-43.000 L -1.000,-51.000 L -6.000,-51.000 L -1.000,-59.000 Z" />
+
+                        <!-- Layer 1/New Symbol 27 -->
+                        <Canvas.RenderTransform>
+                            <MatrixTransform
+                                Matrix="1.000,0.000,0.000,1.000,6.000,59.000" />
+                        </Canvas.RenderTransform>
+
+                    </Canvas>
+
+                </Canvas>
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+
+    <!-- flag icon -->
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.Flag}">
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+
+                <!-- Layer 1/New Symbol 14/<Path> -->
+                <Path
+                    Fill="{TemplateBinding Foreground}"
+                    Data="F1 M 3.698,-57.680 C 3.698,-57.680 1.120,-56.447 -1.458,-57.342 C -4.266,-58.320 -5.532,-57.926 -6.732,-56.463 C -6.938,-56.579 -7.196,-56.592 -7.413,-56.460 C -7.729,-56.266 -7.829,-55.849 -7.633,-55.534 L -0.796,-44.439 C -0.669,-44.232 -0.449,-44.119 -0.224,-44.119 C -0.104,-44.119 0.018,-44.153 0.128,-44.220 C 0.445,-44.414 0.542,-44.830 0.348,-45.146 L -2.693,-50.080 C -1.494,-51.539 -0.229,-51.933 2.577,-50.957 C 5.156,-50.059 7.733,-51.291 7.733,-51.291 L 3.698,-57.680 Z" />
+
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.Export}">
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+
+                <Canvas>
+
+                    <Canvas>
+
+                        <!-- Layer 1/<Group>/<Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M 12.000,12.999 L 2.000,13.000 L 2.000,11.000 L 12.000,10.999 L 12.000,12.999 Z" />
+
+                        <!-- Layer 1/<Group>/<Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M 2.000,13.000 L 0.000,13.000 L 0.000,9.000 L 2.000,9.000 L 2.000,13.000 Z" />
+
+                        <!-- Layer 1/<Group>/<Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M 14.000,12.999 L 12.000,12.999 L 12.000,8.999 L 14.000,8.999 L 14.000,12.999 Z" />
+
+                        <!-- Layer 1/<Group>/<Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M 2.000,5.190 L 4.000,5.190 L 4.000,9.191 L 10.000,9.190 L 10.000,5.190 L 12.000,5.190 L 6.796,0.000 L 2.000,5.190 Z" />
+
+                    </Canvas>
+
+                </Canvas>
+            </Canvas>
+        </Viewbox>
+
+    </ControlTemplate>
+
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.Configure}">
+
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+
+                <Canvas>
+
+                    <Canvas>
+
+                        <!-- Layer 1/New Symbol 83/<Group>/<Group>/<Compound Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M -0.208,-48.918 C -1.357,-48.918 -2.290,-49.848 -2.290,-51.000 C -2.290,-52.152 -1.357,-53.082 -0.208,-53.082 C 0.944,-53.082 1.876,-52.152 1.876,-51.000 C 1.876,-49.848 0.944,-48.918 -0.208,-48.918 Z M 6.665,-52.459 L 4.575,-52.459 C 4.451,-52.859 4.276,-53.238 4.063,-53.590 L 5.449,-54.979 C 5.776,-55.302 5.776,-55.831 5.449,-56.156 L 4.861,-56.744 C 4.535,-57.068 4.007,-57.066 3.683,-56.744 L 2.273,-55.336 C 1.892,-55.553 1.479,-55.721 1.040,-55.834 L 1.040,-57.666 C 1.040,-58.125 0.669,-58.500 0.208,-58.500 L -0.625,-58.500 C -1.084,-58.500 -1.458,-58.125 -1.458,-57.666 L -1.458,-55.834 C -1.937,-55.713 -2.385,-55.522 -2.798,-55.272 L -3.977,-56.451 C -4.302,-56.774 -4.832,-56.775 -5.156,-56.451 L -5.747,-55.862 C -6.072,-55.538 -6.068,-55.008 -5.745,-54.682 L -4.543,-53.480 C -4.797,-53.038 -4.988,-52.555 -5.097,-52.043 L -6.666,-52.043 C -7.126,-52.043 -7.500,-51.670 -7.500,-51.209 L -7.500,-50.375 C -7.500,-49.916 -7.126,-49.543 -6.666,-49.543 L -4.990,-49.543 C -4.839,-49.041 -4.609,-48.578 -4.316,-48.156 L -5.449,-47.023 C -5.775,-46.697 -5.775,-46.168 -5.452,-45.844 L -4.863,-45.256 C -4.536,-44.933 -4.007,-44.933 -3.683,-45.258 L -2.417,-46.522 C -1.991,-46.311 -1.528,-46.156 -1.042,-46.078 L -1.042,-44.335 C -1.042,-43.875 -0.669,-43.502 -0.208,-43.500 L 0.625,-43.500 C 1.083,-43.502 1.458,-43.875 1.458,-44.335 L 1.458,-46.293 C 1.877,-46.441 2.275,-46.639 2.636,-46.893 L 3.977,-45.551 C 4.303,-45.226 4.829,-45.226 5.156,-45.551 L 5.745,-46.139 C 6.072,-46.464 6.072,-46.992 5.742,-47.318 L 4.272,-48.791 C 4.453,-49.156 4.593,-49.547 4.680,-49.959 L 6.665,-49.959 C 7.126,-49.959 7.499,-50.330 7.500,-50.793 L 7.500,-51.625 C 7.499,-52.084 7.126,-52.459 6.665,-52.459 Z" />
+
+                    </Canvas>
+
+                </Canvas>
+
+                <!-- Layer 1/New Symbol 83 -->
+                <Canvas.RenderTransform>
+                    <MatrixTransform
+                        Matrix="1.000,0.000,0.000,1.000,7.500,250.427" />
+                </Canvas.RenderTransform>
+
+            </Canvas>
+        </Viewbox>
+
+    </ControlTemplate>
+
+    <ControlTemplate
+        x:Key="{x:Static resourceKeys:Icons.Eraser}">
+
+        <Viewbox
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}">
+            <Canvas
+                Width="{TemplateBinding Width}"
+                Height="{TemplateBinding Height}">
+                <Canvas>
+
+                    <Canvas>
+
+                        <!-- Layer 1/<Group>/<Compound Path> -->
+                        <Path
+                            Fill="{TemplateBinding Foreground}"
+                            Data="F1 M 6.743,11.469 C 6.542,11.670 6.137,12.021 5.852,12.021 L 4.316,12.021 C 4.032,12.021 3.517,11.670 3.316,11.469 L 0.999,9.092 L 4.640,5.425 L 8.674,9.461 L 6.743,11.469 Z M 13.807,4.411 L 9.720,0.309 C 9.526,0.114 9.270,0.000 9.014,0.000 C 8.757,0.000 8.500,0.096 8.307,0.291 L 0.292,8.307 C -0.097,8.695 -0.097,9.333 0.292,9.720 L 2.609,12.176 C 2.999,12.565 3.766,13.021 4.316,13.021 L 5.852,13.021 C 6.403,13.021 7.170,12.565 7.559,12.176 L 13.807,5.859 C 14.196,5.470 14.196,4.799 13.807,4.411 Z" />
+
+                    </Canvas>
+
+                </Canvas>
+            </Canvas>
+        </Viewbox>
+    </ControlTemplate>
+</ResourceDictionary>

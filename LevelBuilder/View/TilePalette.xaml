@@ -1,0 +1,353 @@
+﻿<UserControl
+    x:Class="LevelBuilder.View.TilePalette"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:view="clr-namespace:LevelBuilder.View"
+    xmlns:common="clr-namespace:LevelBuilder.Common"
+    xmlns:resourceKeys="clr-namespace:LevelBuilder.Common.ResourceKeys"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="300">
+    <UserControl.Resources>
+        
+        <SolidColorBrush x:Key="PaletteItemBorderBrush" Color="#FF606060"/>
+        <SolidColorBrush x:Key="PaletteItemHightLightBorderBrush" Color="#ffffcc33"/>
+        <SolidColorBrush x:Key="PaletteItemHightLightBackground" Color="#11ffcc33"/>
+        
+        
+        <Style x:Key="StaticTileBrushButtons" TargetType="{x:Type RadioButton}" >
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Width" Value="32"/>
+            <Setter Property="Margin" Value="0,2,2,2"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    
+                    <ControlTemplate TargetType="RadioButton">
+                        <Grid>
+                            <Border
+                                SnapsToDevicePixels="True"
+                                ClipToBounds="True"
+                                x:Name="buttonborder"
+                                Background="#01000000"
+                                BorderBrush="{StaticResource PaletteItemBorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+
+                                <Border
+                                    Margin="-1,-1,0,0"
+                                    SnapsToDevicePixels="True"
+                                    ClipToBounds="True"
+                                    x:Name="buttoncaptionbackground"
+                                    CornerRadius="0,0,3,0"
+                                    VerticalAlignment="Top"
+                                    HorizontalAlignment="Left"
+                                    Background="{StaticResource PaletteItemBorderBrush}">
+                                    <TextBlock
+                                        Margin="1,1,0,0"
+                                        TextAlignment="Center"
+                                        FontSize="9"
+                                        Width="12"
+                                        Height="12"
+                                        x:Name="text"
+                                        Foreground="White"
+                                        Text="{TemplateBinding Content}" />
+
+                                </Border>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="buttonborder" Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=Background}"/>
+                                <Setter TargetName="buttoncaptionbackground" Property="Background" Value="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=Background}"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="buttonborder" Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=Background}"/>
+                                <Setter TargetName="buttoncaptionbackground" Property="Background" Value="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=Background}"/>
+                                <Setter Property="BorderThickness" Value="2"/>
+                                        
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        
+        <Style x:Key="StaticTileBrushButtonsWithIcon" BasedOn="{StaticResource StaticTileBrushButtons}" TargetType="{x:Type RadioButton}" >
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Width" Value="32"/>
+            <Setter Property="Margin" Value="0,2,2,2"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            
+            <Setter Property="Foreground" Value="{StaticResource {x:Static resourceKeys:Global.Foreground}}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    
+                    <ControlTemplate TargetType="RadioButton">
+                        <Grid>
+                            <Border
+                                SnapsToDevicePixels="True"
+                                ClipToBounds="True"
+                                x:Name="buttonborder"
+                                Background="#01000000"
+                                BorderBrush="{StaticResource PaletteItemBorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+
+                         
+                                <ContentPresenter Content="{TemplateBinding Content}" />
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="buttonborder" Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=Background}"/>
+                                <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource Self}, Path=Background}"/>
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="buttonborder" Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=Background}"/>
+                                <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource Self}, Path=Background}"/>
+                                <Setter Property="BorderThickness" Value="2"/>
+                                        
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        
+        <Style x:Key="StaticTileBrushIcon" TargetType="Control">
+            <Setter Property="Height" Value="16"/>
+            <Setter Property="Width" Value="16"/>
+            <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type RadioButton}}, Path=Foreground}"/>
+            <Style.Triggers>
+                            
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=IsMouseOver}" Value="True">
+                    <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=Background}"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=IsChecked}" Value="True">
+                    <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=Background}"/>
+                                        
+                </DataTrigger>
+            </Style.Triggers>
+
+        </Style>
+        
+        
+        <Style x:Key="TilePaletteItemStyle" TargetType="{x:Type view:TilePaletteItem}">
+            <Setter Property="X" Value="{Binding XAxis}"/><!-- this is not how you use MVVM but i dont care right now-->
+            <Setter Property="Y" Value="{Binding YAxis}"/> <!-- this is not how you use MVVM but i dont care right now-->
+            <Setter Property="Size" Value="{Binding Size}"/> <!-- this is not how you use MVVM but i dont care right now-->
+            <Setter Property="Bitmap" Value="{Binding Bitmap}"/><!-- this is not how you use MVVM but i dont care right now-->
+            <Setter Property="Key" Value="{Binding Key}"/><!-- this is not how you use MVVM but i dont care right now-->
+            <Setter Property="Command" Value="{Binding Command, Mode=TwoWay}"/><!-- this is not how you use MVVM but i dont care right now-->
+
+            <Setter Property="Content" Value="{Binding Path=.}"/>
+            <EventSetter Event="MouseLeftButtonDown" Handler="TilePaletteItem_OnMouseDown"/>
+            <EventSetter Event="MouseLeftButtonUp" Handler="TilePaletteItem_OnMouseUp"/>
+            <EventSetter Event="MouseEnter" Handler="TilePaletteItem_OnMouseOver"/>
+                    
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Width" Value="32"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Stretch" />
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="{StaticResource PaletteItemBorderBrush}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type view:TilePaletteItem}">
+                        <Grid>
+                            <ContentPresenter
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                x:Name="content" />
+                            <Rectangle
+                                x:Name="bd"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                Fill="{TemplateBinding Background}"
+                                StrokeThickness="1" 
+                                StrokeDashArray="1 2" 
+                                />
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="{StaticResource PaletteItemHightLightBackground}"/>
+                                <Setter Property="BorderBrush" Value="{StaticResource PaletteItemHightLightBorderBrush}"/>
+                                <Setter TargetName="bd" Property="StrokeDashArray" Value="1 0"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="BorderBrush" Value="{StaticResource PaletteItemHightLightBorderBrush}"/>
+                                <Setter TargetName="bd" Property="StrokeDashArray" Value="1 0"/>
+                                <Setter TargetName="bd" Property="StrokeThickness" Value="2"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+    </UserControl.Resources>
+    <Grid DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type view:TilePalette}}}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel 
+            Grid.Column="1"
+            Orientation="Horizontal">
+
+            <RadioButton
+                IsChecked="True"
+                Checked="Picker_Checked"
+                GroupName="toolbrushes"
+                Background="{StaticResource PaletteItemHightLightBorderBrush}"
+                ToolTip="{x:Static common:Constants.PickerTileBrush_ToolTip}"
+                Style="{StaticResource StaticTileBrushButtonsWithIcon}"
+                x:Name="Picker">
+                <Control
+                    Style="{StaticResource StaticTileBrushIcon}"
+                    Template="{StaticResource {x:Static resourceKeys:Icons.Selection}}" />
+            </RadioButton>
+
+            <RadioButton
+                Checked="EmptyTileBrush_Checked"
+                GroupName="toolbrushes"
+                Background="{StaticResource PaletteItemHightLightBorderBrush}"
+                ToolTip="{x:Static common:Constants.EmptyTileBrush_ToolTip}"
+                Style="{StaticResource StaticTileBrushButtonsWithIcon}"
+                x:Name="EmptyTileBrush">
+                <Control
+                    Style="{StaticResource StaticTileBrushIcon}"
+                    Template="{StaticResource {x:Static resourceKeys:Icons.Eraser}}" />
+            </RadioButton>
+            <RadioButton
+                Checked="BrushTool_Checked"
+                GroupName="toolbrushes"
+                Background="{StaticResource PaletteItemHightLightBorderBrush}"
+                ToolTip="{x:Static common:Constants.BrushTileBrush_ToolTip}"
+                Style="{StaticResource StaticTileBrushButtonsWithIcon}"
+                x:Name="BrushTool">
+                <Control
+                    Style="{StaticResource StaticTileBrushIcon}"
+                    Template="{StaticResource {x:Static resourceKeys:Icons.Brush}}" />
+            </RadioButton>
+            <RadioButton
+                Checked="FillTool_Checked"
+                GroupName="toolbrushes"
+                Background="{StaticResource PaletteItemHightLightBorderBrush}"
+                ToolTip="{x:Static common:Constants.FillBucketTileBrush_ToolTip}"
+                Style="{StaticResource StaticTileBrushButtonsWithIcon}"
+                x:Name="FillTool">
+                <Control
+                    Style="{StaticResource StaticTileBrushIcon}"
+                    Template="{StaticResource {x:Static resourceKeys:Icons.Bucket}}" />
+            </RadioButton>
+
+            <RadioButton
+                Margin="10,2,2,2"
+                Checked="StartTileBrush_OnChecked"
+                ToolTip="{x:Static common:Constants.StartTileBrush_ToolTip}"
+                Background="{StaticResource {x:Static resourceKeys:Global.StartTileBrush}}"
+                Content="{x:Static common:Constants.starttilecaption}"
+                GroupName="specialbrushes"
+                Style="{StaticResource StaticTileBrushButtons}"
+                x:Name="StartTileBrush" />
+            <RadioButton
+                Checked="EventTileBrush_OnChecked"
+                ToolTip="{x:Static common:Constants.EventTileBrush_ToolTip}"
+                Content="{x:Static common:Constants.eventtilecaption}"
+                Background="{StaticResource {x:Static resourceKeys:Global.EventTileBrush}}"
+                GroupName="specialbrushes"
+                Style="{StaticResource StaticTileBrushButtons}"
+                x:Name="EventTileBrush" />
+
+        </StackPanel>
+        
+        <view:TilePaletteRowCollection
+            x:Name="paletteitems"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+            Grid.Row="1"
+            Grid.Column="1"
+            ItemsSource="{Binding ItemsSource}"
+            ItemTemplate="{Binding ItemTemplate}"
+            BorderBrush="{StaticResource PaletteItemBorderBrush}"
+            BorderThickness="1"
+            Padding="2"
+            Margin="0,2,2,2"
+            MouseLeave="Paletteitems_OnMouseLeave"
+            >
+            <view:TilePaletteRowCollection.Template>
+                
+                <ControlTemplate TargetType="{x:Type view:TilePaletteRowCollection}">
+                    <ScrollViewer
+                        CanContentScroll="True"
+                        IsDeferredScrollingEnabled="True"
+                        HorizontalScrollBarVisibility="Auto"
+                        Padding="0"
+                        Focusable="False">
+                        <ItemsPresenter />
+                    </ScrollViewer>
+                </ControlTemplate>
+            </view:TilePaletteRowCollection.Template>
+            <view:TilePaletteRowCollection.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel
+                        VirtualizationMode="Recycling"
+                        Orientation="Vertical"
+                        IsItemsHost="True" />
+                </ItemsPanelTemplate>
+            </view:TilePaletteRowCollection.ItemsPanel>
+            <view:TilePaletteRowCollection.ItemContainerStyle>
+                <Style TargetType="{x:Type view:TilePaletteRow}">
+     
+                    <Setter Property="SnapsToDevicePixels" Value="True"/>
+                    <Setter Property="ClipToBounds" Value="True"/>
+                    <Setter Property="Margin" Value="0,0,0,0"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type view:TilePaletteRow}">
+                                <Grid>
+                                    <view:TilePaletteCellCollection
+                                        x:Name="tilepalettecellcollection"
+                                        Focusable="False"
+                                        ScrollViewer.CanContentScroll="False"
+                                        ScrollViewer.HorizontalScrollBarVisibility="Hidden" 
+                                        ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                                        ItemsSource="{TemplateBinding DataContext}"
+                                        ItemTemplate="{Binding RelativeSource={RelativeSource AncestorType={x:Type view:TilePalette}}, Path=ItemTemplate}"
+                                        ItemContainerStyle="{StaticResource TilePaletteItemStyle}"
+                                        >
+                                        <view:TilePaletteCellCollection.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Horizontal" IsItemsHost="True"/>
+                                            </ItemsPanelTemplate>
+                                        </view:TilePaletteCellCollection.ItemsPanel>
+                                    </view:TilePaletteCellCollection>
+                                    <Rectangle
+                                        x:Name="rowbd"
+                                        Stroke="{StaticResource PaletteItemBorderBrush}"
+                                        StrokeThickness="1" 
+                                        StrokeDashArray="1 2" 
+                                        />
+                                  
+                                </Grid>
+                               
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </view:TilePaletteRowCollection.ItemContainerStyle>
+        </view:TilePaletteRowCollection>
+    </Grid>
+</UserControl>
